@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Meta Pixel inspector",
+  "version": "1.0.0",
+  "description": "Detects Meta (Facebook) Pixels on web pages and displays event details, parameters, and advanced matching data.",
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "32": "icons/pixel.png"
+    }
+  },
+  "icons": {
+    "32": "icons/pixel.png"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Pixel Inspector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <div class="pixel-list" id="pixelList"></div>
+  <div class="empty-state" id="emptyState" style="display: none;">
+    <div class="empty-icon">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#ccc" stroke-width="2" stroke-dasharray="4 4"/>
+        <text x="24" y="30" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="18">&lt;/&gt;</text>
+      </svg>
+    </div>
+    <div class="empty-text">No pixels found on this page.</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
